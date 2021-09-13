@@ -1,0 +1,38 @@
+.navigation {
+    -fx-background-color: #373A40;
+    -fx-pref-height: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.navigation Button{
+    -fx-min-width: 100px;
+    -fx-background-color: #373A40;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-style: solid;
+    -fx-border-color: #FFFFFF;
+    -fx-min-height: 100%;
+}
+
+.navigation Button:hover {
+    -fx-background-color: #393e46;
+}
+
+.navigation .buttonLeft{
+    -fx-border-width: 0px 2px 0px 0px;
+}
+
+.navigation .buttonRight{
+    -fx-border-style: solid;
+    -fx-border-width: 0px 0px 0px 2px;
+    -fx-border-color: #FFFFFF;
+}
+
+.navigation .buttonWrapper {
+    -fx-spacing: 0;
+}
+
+.navigation .navigationWrapper {
+    -fx-min-width: 1600px;
+    -fx-max-width: 1920px;
+    -fx-background-color: black;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="routerParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.javafx.controller.SendVoucherController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="448.0" layoutY="22.0" prefHeight="900.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Gutschein Code eingeben">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="voucherCodeTextField" />
+            <ScrollPane prefHeight="765.0" prefWidth="600.0">
+               <content>
+                  <VBox fx:id="userGiftCardContainer" prefHeight="763.0" prefWidth="597.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="InfoLabel" text="InfoLabel" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

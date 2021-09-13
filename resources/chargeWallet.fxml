@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="routerParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.javafx.controller.WalletController">
+   <children>
+      <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Label fx:id="greeterLabel" minWidth="-Infinity" text="Hallo User, wie viel Geld möchtest du aufladen?" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="chargeCardContainer" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT">
+                                 <children>
+                                    <Label minWidth="-Infinity" text="Beliebiger Betrag">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <TextField fx:id="customChargeField" minWidth="-Infinity" prefHeight="40.0" prefWidth="60.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="-Infinity" text="\$EP">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#onCustomCharge" text="Aufladen">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label alignment="CENTER" minWidth="-Infinity" text="Aktuelles Guthaben">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="balanceLabel" minWidth="-Infinity" text="350,0 $EP">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="infoLabel" alignment="BOTTOM_CENTER" text="Label" VBox.vgrow="NEVER" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="202.0">
+               <children>
+                  <Label text="Gutschein Code erstellen" />
+                  <Button fx:id="value1" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" text="5$" />
+                  <Button fx:id="value2" mnemonicParsing="false" text="10$" />
+                  <Button fx:id="value3" mnemonicParsing="false" text="25$" />
+                  <Button fx:id="value4" mnemonicParsing="false" text="50$" />
+                  <TextField fx:id="generatedCode" text="" />
+                  <Label alignment="CENTER_RIGHT" text="Gutschein Code einlösen" />
+                  <TextField fx:id="voucherCode" />
+                  <Button fx:id="sendCode" mnemonicParsing="false" onAction="#onSendCode" text="einlösen" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.javafx.controller.RegisterController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="1025.0" prefWidth="1420.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Super E - Commerce Platform ">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="600.0" maxWidth="900.0" VBox.vgrow="SOMETIMES">
+                           <children>
+                              <GridPane maxWidth="1000.0" minWidth="800.0" vgap="20.0" HBox.hgrow="ALWAYS">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" />
+                                    <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <RadioButton fx:id="customer" mnemonicParsing="false" onAction="#hideCompanyNameField" selected="true" text="Privatkunde" GridPane.halignment="CENTER">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="customerType" />
+                                       </toggleGroup>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="commercialCustomer" mnemonicParsing="false" onAction="#showCompanyNameField" text="Gewerbekunde" toggleGroup="$customerType" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Label text="Nutzername" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="usernameField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <Label text="E-Mail" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="emailField" alignment="CENTER" layoutX="827.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                    <Label layoutX="10.0" layoutY="347.0" text="Straße mit Hausnummer" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="streetField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="Postleitzahl" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="postcodeField" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label text="Stadt" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="cityField" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label text="Passwort" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="470.0" layoutY="435.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                    <Label layoutX="10.0" layoutY="347.0" text="Passwort wiederholen" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="passwordRepeatField" alignment="CENTER" layoutX="470.0" layoutY="435.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                    <Label fx:id="companyLabel" text="Gewerbename" visible="false" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="companyField" alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <Button maxHeight="25.0" maxWidth="200.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#register" prefHeight="25.0" prefWidth="150.0" text="Registrieren" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                                    <Button maxHeight="25.0" maxWidth="200.0" mnemonicParsing="false" onAction="#goToLogin" text="Zurück zum Login" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                                    <RadioButton fx:id="twoFactorAuthToggler" mnemonicParsing="false" onAction="#toggleTwoFactorAuth" text="Two - Factor - Authentifizieren" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="info" text="Loading" visible="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

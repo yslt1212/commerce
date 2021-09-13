@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="navigationBorderPane" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.javafx.controller.NavigationController">
+   <top>
+      <HBox prefHeight="30.0" prefWidth="200.0" styleClass="navigation" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="20.0" styleClass="buttonWrapper" HBox.hgrow="SOMETIMES">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToHome" styleClass="buttonLeft" text="Home" />
+                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToCatalog" styleClass="buttonLeft" text="Katalog" />
+                  <Button fx:id="addProductBtn" focusTraversable="false" maxHeight="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToAddProduct" styleClass="buttonLeft" text="Produkte hinzufügen" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="buttonWrapper" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="walletButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBalancePressed" styleClass="buttonRight" text="250 $EP" />
+                  <Button fx:id="messageButton" layoutX="1081.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" styleClass="buttonRight" text="Nachrichten" />
+                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#onProfilePressed" styleClass="buttonRight" text="Profil" />
+                  <Button fx:id="sendVoucherButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSendVoucher" styleClass="buttonRight" text="Gutschein verschenken" />
+                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#logout" styleClass="buttonRight" text="Logout" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <stylesheets>
+      <URL value="@css/navigation.css" />
+      <URL value="@css/root.css" />
+   </stylesheets>
+</BorderPane>

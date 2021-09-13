@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<fx:root type="javafx.scene.layout.AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-border-radius: 10; -fx-border-style: solid; -fx-border-color: linear-gradient(#404040 0%, #808080 100%);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="authorLabel" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" text="User">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="messageLabel" alignment="TOP_LEFT" minHeight="-Infinity" minWidth="-Infinity" text="Some" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <Label fx:id="timeLabel" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" text="20:12" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</fx:root>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="400.0" prefWidth="200.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="-5.0" prefWidth="200.0" styleClass="productCard" stylesheets="@css/productCard.css">
+         <children>
+            <GridPane layoutX="10.0" layoutY="160.0" maxWidth="200.0" prefHeight="104.0" prefWidth="180.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="pickup_label" styleClass="productCardText" text="Abholdatum" GridPane.rowIndex="2" />
+                  <Label styleClass="productCardText" GridPane.rowIndex="2" />
+                  <Label fx:id="pickUp_date" styleClass="productCardText" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label styleClass="productCardText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label styleClass="productCardText" GridPane.rowIndex="4" />
+                  <Label text="Preis" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Label text="Produktname" textFill="WHITE" />
+                  <Label text="Verkäufer" textFill="WHITE" GridPane.rowIndex="3" />
+                  <Label fx:id="seller" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="productName" text="Label" textFill="WHITE" GridPane.columnIndex="1" />
+                  <Label fx:id="price" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label layoutX="10.0" layoutY="14.0" prefHeight="30.0" prefWidth="106.0" styleClass="productCardText" text="Bestellung: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="deleteOrderBtn" layoutX="18.0" layoutY="358.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="25.0" prefWidth="160.0" styleClass="productBuyButton" text="Stornieren" />
+            <HBox alignment="CENTER" layoutX="1.0" layoutY="383.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="orderID" layoutX="110.0" layoutY="14.0" prefHeight="30.0" prefWidth="58.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="info" layoutX="18.0" layoutY="321.0" prefHeight="17.0" prefWidth="160.0" text="Label" textFill="WHITE" visible="false" />
+            <Button fx:id="rateBuyerBtn" focusTraversable="false" layoutX="18.0" layoutY="358.0" mnemonicParsing="false" onAction="#rateBuyer" prefHeight="25.0" prefWidth="160.0" styleClass="productBuyButton" text="Bewerten" visible="false" />
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Pane>
+   </children>
+</fx:root>

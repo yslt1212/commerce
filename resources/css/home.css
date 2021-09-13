@@ -1,0 +1,12 @@
+
+
+.homeProfile{
+    -fx-stroke:#0063AA;
+    -fx-stroke-width: 5px;
+    -fx-fill:white;
+}
+
+.homeShowMore{
+    -fx-background-color: #0063AA;
+    -fx-text-fill:white;
+}

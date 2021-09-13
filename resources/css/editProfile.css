@@ -1,0 +1,4 @@
+.imgContainer:hover {
+    -fx-opacity: 0.8;
+    -fx-stroke: #22252A;
+}

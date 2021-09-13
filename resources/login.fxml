@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.javafx.controller.LoginController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <AnchorPane maxHeight="553.0" prefHeight="553.0" prefWidth="472.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" layoutX="154.0" layoutY="98.0" maxWidth="1.7976931348623157E308" text="Amazonas">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="202.0" fitWidth="211.0" layoutX="135.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="106.0" layoutY="184.0" text="Hier regnet es Angebote">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <VBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="usernameField" maxHeight="25.0" maxWidth="500.0" promptText="Nutzername">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <PasswordField fx:id="passwordField" maxHeight="25.0" maxWidth="500.0" promptText="Passwort">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Hyperlink onAction="#goToForgotPassword" text="Passwort vergessen?" underline="true" />
+                        <AnchorPane>
+                           <children>
+                              <Button maxHeight="25.0" maxWidth="200.0" mnemonicParsing="false" onAction="#goToRegister" prefWidth="200.0" text="Registrieren" AnchorPane.rightAnchor="0.0" />
+                              <Button maxHeight="25.0" maxWidth="200.0" minWidth="150.0" mnemonicParsing="false" onAction="#login" prefWidth="200.0" text="Login" AnchorPane.leftAnchor="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </AnchorPane>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="info" text="Label" visible="false" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
